@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops is JavaScript</h1>
+    <ul id="user">
+    </ul>
+    <script>
+        const fruits = ["Banana","Apple","Mango"];
+        const user = {
+            name: "prabhakar kumar",
+            age: 23,
+            email: "pb@test.com"
+        }; 
+        for (const val of fruits) {
+            console.log(val);   
+        }
+
+        let userEle = document.getElementById("user");
+        let userList=[];
+        for (const key in user) {
+            if (Object.hasOwnProperty.call(user, key)) {
+                const element = user[key];            
+                console.log(key+":"+element);
+                userEle.innerHTML += `<li>${element}</li>`;
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

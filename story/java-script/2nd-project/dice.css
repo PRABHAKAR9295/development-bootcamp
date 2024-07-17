@@ -1,0 +1,20 @@
+
+html{
+    background-color: black;
+}
+
+.container{
+    background-color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10%;
+    padding: auto;
+    width: 40%;
+}
+button{
+    height: 50px;
+    width: 20%;
+    
+    background-color: green;
+    border-radius: 5em;
+}

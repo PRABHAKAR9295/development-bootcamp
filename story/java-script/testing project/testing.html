@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Authentication</title>
+    <!--
+        <link rel="stylesheet" href="testing.css">
+     -->
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm">
+            <h2>Login with Twitter</h2>
+            <button id="loginButton">Login with Twitter</button>
+            <div class="separator">or</div>
+            <form id="idPasswordForm">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+            <div class="options">
+                <a href="#" id="forgotPasswordLink"> Forgot password? </a>
+                <span> | </span>
+                <a href="#" id="newUserLink"> New user? Sign up </a>
+            </div>
+        </div>
+        
+        <div id="forgotPasswordForm" style="display: none;">
+            <h2>Forgot Password</h2>
+            <p>Enter your email address to reset your password:</p>
+            <input type="email" id="forgotEmail" placeholder="Email">
+            <button id="resetPasswordButton">Reset Password</button>
+            <div class="options">
+                <a href="#" id="backToLoginLink">Back to Login</a>
+            </div>
+        </div>
+        
+
+        <div id="newUserForm" style="display: none;">
+            <h2>New User Registration</h2>
+            <input type="text" id="newUsername" placeholder="Username">
+            <input type="email" id="newEmail" placeholder="Email">
+            <input type="password" id="newPassword" placeholder="Password">
+            <button id="registerButton">Register</button>
+            <div class="options">
+                <a href="#" id="backToLoginLink2">Back to Login</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
