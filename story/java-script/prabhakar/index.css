@@ -1,0 +1,18 @@
+body{
+    background-color: purple;
+    text-align: center;
+}
+h1{
+    color: red;
+    font-size: 50px;
+    text-shadow:2px 2px 4px #ff0000;
+    font-family: cursive;
+}
+p{
+    font-size: 40px;
+    font-family: cursive;
+}
+a{
+    font-size: 40px;
+    color: green;
+}
