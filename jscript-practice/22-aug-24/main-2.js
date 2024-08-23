@@ -3,7 +3,7 @@ let b =5;
 
 let result;
 function perform(operation){
-    switch(operation){
+    switch(operation.toLowerCase()){
         case 'add':
             result = a + b;
             break;
@@ -21,7 +21,8 @@ function perform(operation){
             break;
         case 'default':
             result = 'this value is not  accupide';   
-    }     
+    }  
+    console.log(operation);   
 }
-perform('ADD');
+perform('ADd');
 console.log(result);
