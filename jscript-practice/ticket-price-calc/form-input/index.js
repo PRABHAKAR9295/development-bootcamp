@@ -11,7 +11,7 @@ function calculate_ticket_price(dateTimeStr){
     let week = ["sun","mon","tue","wed","thu","fri","sat"]
 
     let weekDay = new Date(dateTimeStr).getDay()
-    console.log(weekDay, week[weekDay])
+    // console.log(weekDay, week[weekDay])
 
     switch(week[weekDay]){
         case "sun":
@@ -42,12 +42,29 @@ function calculate_ticket_price(dateTimeStr){
     return finalPrice
 }
 
+function submit() {
+    // event.preventdefault()
+    let name = document.getElementById("name").value;
+    let dateTimeInput = document.getElementById("dateTimeInput");
+    let ticketFinalPrice = calculate_ticket_price(dateTimeInput.value);
+    if (ticketFinalPrice === undefined) {
+        console.log("Enter a date in string format eg: 1970-01-01");
+    }else{
+        // alert(`
+        //     Name: ${name} 
+        //     Ticket Price: Rs. ${ticketFinalPrice}
+        // `);
+        console.log(`
+            Name: ${name} 
+            Ticket Price: Rs. ${ticketFinalPrice}
+             Date: ${dateTimeInput.value}
+        `);
 
-let ticketFinalPrice = calculate_ticket_price("2024-08-24 23:59");
-if (ticketFinalPrice === undefined) {
-    console.log("Enter a date in string format eg: 1970-01-01")
-}else{
-    console.log("Ticket Price: Rs." + ticketFinalPrice);
+        document.getElementById("ticket_details").innerHTML = `
+            Name: <b>${name}</b> <br />
+            Ticket Price: <b>${ticketFinalPrice}</b> <br />
+            Date: <b>${dateTimeInput.value}</b>
+        `;
+    }
 }
-
 
